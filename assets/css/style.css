@@ -464,6 +464,14 @@ a:hover {
   letter-spacing: 1px;
 }
 
+@media screen and (max-width: 768px) {
+  #header .logo {
+    font-size: 15px;
+    padding: 15px 0;
+  }
+  
+}
+
 #header .logo a {
   color: #fff;
 }
@@ -631,7 +639,7 @@ a:hover {
   transition: 0.5s;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
   .mobile-nav-toggle {
     display: block;
   }
@@ -741,7 +749,7 @@ a:hover {
   height: 100vh;
   position: relative;
   color: #fff;
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Source Code Pro', monospace;
 }
 
 .hero .hero-content {
