@@ -11,6 +11,7 @@ Trying to make a portfolio website
     - home
     - about
     - projects
+    - certifications
     - contact
 
 - a dark/light mode toggle button
