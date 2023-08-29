@@ -1,10 +1,3 @@
-/**
-* Template Name: DevFolio
-* Updated: Jul 27 2023 with Bootstrap v5.3.1
-* Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 (function() {
   "use strict";
 
@@ -169,7 +162,7 @@
     new Typed('.typed', {
       strings: typed_strings,
       loop: true,
-      typeSpeed: 100,
+      typeSpeed: 50,
       backSpeed: 50,
       backDelay: 2000
     });
@@ -233,3 +226,14 @@
   new PureCounter();
 
 })()
+
+/* when user visits certain section of the page the logo text will change */
+window.addEventListener('scroll', function() {
+
+  var logo = document.getElementsByClassName('logo')[0];
+  var logoText = logo.getElementsByTagName('span')[0]; 
+
+  var currentSection = document.getElementsByClassName('active')[0].innerText;
+  logoText.innerText = "root@sujoy.de-[" + currentSection + "]";
+
+});
