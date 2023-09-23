@@ -232,8 +232,8 @@ window.addEventListener('scroll', function() {
 
   var logo = document.getElementsByClassName('logo')[0];
   var logoText = logo.getElementsByTagName('span')[0]; 
-
-  var currentSection = document.getElementsByClassName('active')[0].innerText;
-  logoText.innerText = "root@sujoy.de-[" + currentSection + "] #";
+// active section id will be the text of the logo
+  var currentSection = this.document.querySelector('.active').innerText;
+  logoText.innerText = "root@sujoyde-[" + currentSection + "] #";
 
 });
