@@ -1,5 +1,5 @@
 function savedata()  {
-    if (document.getElementById('name').value != "" || document.getElementById('email').value != "" || document.getElementById('subject').value != "" || document.getElementById('message').value != "") {
+    if (document.getElementById('name').value != "" && document.getElementById('email').value != "" && document.getElementById('subject').value != "" && document.getElementById('message').value != "") {
         let thisForm = document.getElementById('contact-form');
         let formData = new FormData( thisForm );
         let formDataObject = Object.fromEntries(formData.entries());
