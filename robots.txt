@@ -1,3 +1,2 @@
 User-agent: *
-Disallow: /assets/
 Sitemap: https://sujoyde.pages.dev/sitemap.xml
