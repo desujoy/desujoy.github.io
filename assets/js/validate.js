@@ -4,7 +4,6 @@ function savedata()  {
         let formData = new FormData( thisForm );
         let formDataObject = Object.fromEntries(formData.entries());
         let formDataJson = JSON.stringify(formDataObject);
-        console.log(formDataJson);
         fetch('https://eo3q757ytln6jze.m.pipedream.net', {
             method: 'POST',
             body: formDataJson,
@@ -12,7 +11,17 @@ function savedata()  {
                 "Content-type": "application/json; charset=UTF-8"
             }
         })
-        alert("Thank you for your message!")
+        .catch(() => {
+            document.getElementsByClassName('output')[0].style.display = "none";
+            document.getElementsByClassName('error-message')[0].innerHTML = "Something went wrong!";
+            document.getElementsByClassName('error-message')[0].style.display = "block";
+
+        })
+        .then(() => {
+            document.getElementsByClassName('error-message')[0].style.display = "none";
+            document.getElementsByClassName('output')[0].innerHTML = "Thank you for your message!";
+            document.getElementsByClassName('output')[0].style.display = "block";
+        })
         document.getElementById('name').value = "";
         document.getElementById('email').value = "";
         document.getElementById('subject').value = "";
@@ -20,7 +29,9 @@ function savedata()  {
         
 
     } else {
-        alert("Please fill out all fields!")
+        document.getElementsByClassName('output')[0].style.display = "none";
+        document.getElementsByClassName('error-message')[0].innerHTML = "Please fill out all fields!";
+        document.getElementsByClassName('error-message')[0].style.display = "block";
     }
 
 }
