@@ -21,11 +21,11 @@ function savedata()  {
             document.getElementsByClassName('error-message')[0].style.display = "none";
             document.getElementsByClassName('output')[0].innerHTML = "Thank you for your message!";
             document.getElementsByClassName('output')[0].style.display = "block";
+            document.getElementById('name').value = "";
+            document.getElementById('email').value = "";
+            document.getElementById('subject').value = "";
+            document.getElementById('message').value = "";
         })
-        document.getElementById('name').value = "";
-        document.getElementById('email').value = "";
-        document.getElementById('subject').value = "";
-        document.getElementById('message').value = "";
         
 
     } else {
