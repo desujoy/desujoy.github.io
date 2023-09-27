@@ -1115,6 +1115,10 @@ body {
   #contact-form button[type=submit]:hover {
     background: #3393ff;
   }
+
+  .fa-brands{
+    line-height: 1.4em;
+  }
   
   @keyframes animate-loading {
     0% {
