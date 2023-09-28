@@ -518,9 +518,10 @@ body {
   
   .navbar a i,
   .navbar a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
+    font-size: 1.8em;
+    line-height: 1;
+    margin-left: 1.5rem;
+    margin-right: -2em;
   }
   
   .navbar>ul>li>a:before {

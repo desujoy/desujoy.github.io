@@ -202,4 +202,23 @@
     logoText.innerText = "root@sujoyde-[" + currentSection + "] #";
   
   });
+
+  if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+    DarkReader.enable();
+    document.getElementById("dark-switch").querySelector("i").classList.remove("fa-sun-bright");
+    document.getElementById("dark-switch").querySelector("i").classList.add("fa-moon-stars");
+  }
+
+  function darkChange() {
+    if(DarkReader.isEnabled()) {
+      DarkReader.disable();
+      document.getElementById("dark-switch").querySelector("i").classList.remove("fa-moon-stars");
+      document.getElementById("dark-switch").querySelector("i").classList.add("fa-sun-bright");
+    } else {
+      DarkReader.enable();
+      document.getElementById("dark-switch").querySelector("i").classList.remove("fa-sun-bright");
+      document.getElementById("dark-switch").querySelector("i").classList.add("fa-moon-stars");
+    }
+  }
+  
   
